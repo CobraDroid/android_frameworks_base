@@ -45,6 +45,8 @@ import android.text.TextUtils;
 import android.util.EventLog;
 import android.util.Log;
 
+import com.cobradroid.EventNotifier;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -395,6 +397,9 @@ public abstract class ContentResolver {
     public final Cursor query(final Uri uri, String[] projection,
             String selection, String[] selectionArgs, String sortOrder,
             CancellationSignal cancellationSignal) {
+        /* Temporary call to CobraDroid security buffer. */
+        EventNotifier.recordContentProvider(uri, projection, selection, selectionArgs);
+
         IContentProvider unstableProvider = acquireUnstableProvider(uri);
         if (unstableProvider == null) {
             return null;

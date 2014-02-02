@@ -949,6 +949,7 @@ android.util.PrefixPrinter
 android.util.PrintWriterPrinter
 android.util.Printer
 android.util.Property
+android.util.Seclog
 android.util.Singleton
 android.util.Slog
 android.util.SparseArray
@@ -1689,6 +1690,7 @@ com.android.server.NetworkManagementSocketTagger
 com.android.server.NetworkManagementSocketTagger$1
 com.android.server.NetworkManagementSocketTagger$SocketTags
 com.android.server.Watchdog
+com.cobradroid.EventNotifier
 com.google.android.collect.Lists
 com.google.android.collect.Maps
 com.google.android.gles_jni.EGLConfigImpl
